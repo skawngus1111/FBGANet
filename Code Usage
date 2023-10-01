@@ -1,0 +1,22 @@
+Title: DCT-based Boundary-guided Attention Network for Polyp Segmentation from Colonoscopy Images
+
+CODE USAGE
+
+STEP1. Unzip AAAI2024_code.zip
+STEP2. Download polyp segmentation dataset in following link
+STEP3. Move dataset into folder 'dataset/BioMedicalDataset'
+
+For evaluating model, 
+
+STEP4-1. Download model pre-trained weights in following link
+STEP4-2. Move pre-trained weights into folder model_weights
+STEP4-3. Enter following command
+
+CUDA_VISIBLE_DEVICES=[GPU Number] python3 IS2D_main.py --num_workers 8 --save_path model_weight --data_path dataset/BioMedicalDataset/ --train_data_type CVC-ClinicDB --test_data_type CVC-ClinicDB --batch_size 256 --final_epoch 200 --criterion BCE --optimizer_name Adam --lr 0.0001 --LRS_name CALRS --model_name BGANet
+
+
+For training model, 
+
+STEP4-1. Enter following command
+
+CUDA_VISIBLE_DEVICES=[GPU Number] python3 IS2D_main.py --num_workers 8 --save_path model_weight --data_path dataset/BioMedicalDataset/ --train_data_type CVC-ClinicDB --test_data_type CVC-ClinicDB --batch_size 256 --final_epoch 200 --criterion BCE --optimizer_name Adam --lr 0.0001 --LRS_name CALRS --model_name BGANet --train
