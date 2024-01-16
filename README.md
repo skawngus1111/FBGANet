@@ -1,4 +1,4 @@
-# DCT-based Boundary-guided Attention Network for Polyp Segmentation from Colonoscopy Images (IEEE BHI2023 Submission)
+# Frequency-based Boundary-guided Attention Network for Polyp Segmentation from Colonoscopy Images (Elsevier CMPB2024 Submission)
 
 # Code Usage
 
